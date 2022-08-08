@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.justadroiddev.wordscleanarchapp.presentation.ui.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_jokeFragment"
+            app:destination="@id/jokeFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_favoriteJokesFragment"
+            app:destination="@id/favoriteJokesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokeFragment"
+        android:name="com.justadroiddev.wordscleanarchapp.presentation.ui.joke.JokeFragment"
+        android:label="fragment_joke"
+        tools:layout="@layout/fragment_joke" >
+        <argument
+            android:name="jokeCategory"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteJokesFragment"
+        android:name="com.justadroiddev.wordscleanarchapp.presentation.ui.joke.FavoriteJokesFragment"
+        android:label="fragment_favorite_jokes"
+        tools:layout="@layout/fragment_favorite_jokes" >
+        <action
+            android:id="@+id/action_favoriteJokesFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+</navigation>

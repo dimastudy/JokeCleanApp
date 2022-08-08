@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WordsCleanArchApp</string>
+    <string name="no_internet_message">Internet connection problems</string>
+    <string name="cant_read_message">Data reading problems</string>
+    <string name="other_error_message">Something went wrong</string>
+    <string name="empty_list_message">Favorite list is empty</string>
+    <string name="retry">retry</string>
+    <string name="categories">Categories</string>
+    <string name="favorites">Favorites</string>
+</resources>
